@@ -96,4 +96,4 @@ Para ver a lista dinâmica de participantes no seu evento:
 ## 🤝 Conecte-se Comigo
 Este projeto é um exemplo do meu trabalho e aprendizado contínuo em desenvolvimento Salesforce. Se você tiver perguntas, sugestões ou quiser discutir oportunidades, sinta-se à vontade para entrar em contato!
 
-- LinkedIn: [https://github.com/victorbrandaao]
+- LinkedIn: [https://linkedin.com/in/victorbrandaao]
