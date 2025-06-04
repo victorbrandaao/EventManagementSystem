@@ -5,17 +5,20 @@
       <lightning-progress-bar
         value={percentageFull}
         size="large"
-        variant="circular"
+        variant={progressBarVariant}
       ></lightning-progress-bar>
-      <p class="slds-text-align_center slds-text-heading_medium">
-        {percentageFull}% Ocupado
+      <p class={percentageTextColorClass}>
+        <strong class="slds-text-heading_medium"
+          >{percentageFull}% Ocupado</strong
+        >
+        - {capacityStatusMessage}
       </p>
 
       <template if:true={participants.data}>
         <h2 class="slds-text-heading_small slds-var-m-vertical_medium">
           Lista de Participantes ({participants.data.length})
         </h2>
-        <ul class="slds-var-m-bottom_medium">
+        <ul class="slds-m-bottom_medium">
           <template for:each={participants.data} for:item="participant">
             <li key={participant.Id}>
               <lightning-formatted-text
