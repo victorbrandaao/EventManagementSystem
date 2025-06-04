@@ -9,7 +9,7 @@ Um sistema completo de gerenciamento de eventos construído na plataforma Salesf
 ## 📋 Sobre o Projeto
 O Event Management System é uma aplicação Salesforce que criei para gerenciar eventos de um jeito prático e profissional. Este projeto faz parte da minha jornada de aprendizado em Salesforce, e nele explorei desde como organizar os dados até a construção de interfaces dinâmicas e automações inteligentes.
 
-![Captura de Tela do Sistema](./captura-tela-2025-06-03-23-01-02.png)
+![Captura de Tela do Sistema](./Captura%20de%20Tela%202025-06-03%20%C3%A0s%2023.01.02.png)
 
 ## ✨ O Que Você Encontra Aqui
 - 📅 **Eventos e Participantes:** Uma forma simples de cadastrar e organizar seus eventos e todos os inscritos.
