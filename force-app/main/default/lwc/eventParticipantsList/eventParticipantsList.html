@@ -41,9 +41,28 @@
       <lightning-button
         label="Adicionar Novo Participante"
         icon-name="utility:add"
-        onclick={handleAddParticipant}
+        onclick={openParticipantForm}
         class="slds-var-m-top_medium"
       ></lightning-button>
     </div>
   </lightning-card>
+
+  <template if:true={isParticipantFormOpen}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      aria-labelledby="modal-heading-01"
+      class="slds-modal slds-fade-in-open slds-modal_small"
+    >
+      <div class="slds-modal__container">
+        <c-participant-form
+          event-id={recordId}
+          onsaved={handleParticipantSaved}
+          oncancel={closeParticipantForm}
+        ></c-participant-form>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
 </template>
