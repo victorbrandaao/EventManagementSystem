@@ -1,0 +1,49 @@
+<template>
+  <lightning-card title="Participantes do Evento" icon-name="standard:people">
+    <div class="slds-var-p-around_medium">
+      <p>Capacidade: {currentParticipants} / {maxCapacity}</p>
+      <lightning-progress-bar
+        value={percentageFull}
+        size="large"
+        variant="circular"
+      ></lightning-progress-bar>
+      <p class="slds-text-align_center slds-text-heading_medium">
+        {percentageFull}% Ocupado
+      </p>
+
+      <template if:true={participants.data}>
+        <h2 class="slds-text-heading_small slds-var-m-vertical_medium">
+          Lista de Participantes ({participants.data.length})
+        </h2>
+        <ul class="slds-var-m-bottom_medium">
+          <template for:each={participants.data} for:item="participant">
+            <li key={participant.Id}>
+              <lightning-formatted-text
+                value={participant.Name}
+              ></lightning-formatted-text>
+              -
+              <lightning-formatted-email
+                value={participant.Email__c}
+              ></lightning-formatted-email>
+            </li>
+          </template>
+        </ul>
+      </template>
+      <template if:false={participants.data}>
+        <p>Nenhum participante encontrado para este evento.</p>
+      </template>
+      <template if:true={participants.error}>
+        <p class="slds-text-color_error">
+          Erro ao carregar participantes: {participants.error.body.message}
+        </p>
+      </template>
+
+      <lightning-button
+        label="Adicionar Novo Participante"
+        icon-name="utility:add"
+        onclick={handleAddParticipant}
+        class="slds-var-m-top_medium"
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>
